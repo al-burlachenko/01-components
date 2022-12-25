@@ -1,5 +1,7 @@
+import Title from './Title';
+
 function App() {
-  return <div className="App"></div>;
+  return <Title title="болтание болторезами без болтов" />;
 }
 
 export default App;
