@@ -9,7 +9,7 @@ function App() {
   return (
     <>
       <Title title="болтание болторезами без болтов" />
-      <EventBoard props={data} />
+      <EventBoard events={data} />
     </>
   );
 }

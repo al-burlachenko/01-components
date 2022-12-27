@@ -1,29 +1,39 @@
+import PropTypes from 'prop-types';
 import css from './Event.module.css';
-// console.log(css);
 
+// console.log(s);
 function Event({ name, location, speaker, type, timeStart, timeEnd }) {
   return (
-    <div className={CSS.event}>
-      <h2 className={CSS.title}>Name</h2>
-      <p className={CSS.info}>
-        <i className={CSS.icon}></i>
+    <div className={css.event}>
+      <h2 className={css.title}>Name</h2>
+      <p className={css.info}>
+        <i className={css.icon}></i>
         Location
       </p>
-      <p className={CSS.info}>
-        <i className={CSS.icon}></i>
+      <p className={css.info}>
+        <i className={css.icon}></i>
         Speaker
       </p>
-      <p className={CSS.info}>
-        <i className={CSS.icon}></i>
+      <p className={css.info}>
+        <i className={css.icon}></i>
         Start Date
       </p>
-      <p className={CSS.info}>
-        <i className={CSS.icon}></i>
+      <p className={css.info}>
+        <i className={css.icon}></i>
         Duration
       </p>
-      <span className={CSS.chip}>Event type</span>
+      <span className={css.chip}>Event type</span>
     </div>
   );
 }
 
 export default Event;
+
+Event.propTypes = {
+  name: PropTypes.string.isRequired,
+  location: PropTypes.string.isRequired,
+  speaker: PropTypes.string.isRequired,
+  type: PropTypes.string.isRequired,
+  timeStart: PropTypes.string.isRequired,
+  timeEnd: PropTypes.string.isRequired,
+};
