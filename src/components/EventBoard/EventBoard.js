@@ -23,5 +23,16 @@ function EventBoard({ events }) {
 export default EventBoard;
 
 EventBoard.propTypes = {
-  events: PropTypes.array,
+  events: PropTypes.arrayOf(
+    PropTypes.exact({
+      name: PropTypes.string.isRequired,
+      location: PropTypes.string.isRequired,
+      speaker: PropTypes.string.isRequired,
+      type: PropTypes.string.isRequired,
+      time: {
+        start: PropTypes.string.isRequired,
+        end: PropTypes.string.isRequired,
+      },
+    }),
+  ),
 };
